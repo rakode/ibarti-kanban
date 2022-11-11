@@ -42,9 +42,16 @@ export class BoardComponent implements OnInit {
         (response: any) => this.lists = response,
         (error: string) => (console.log('Ups! we have an error: ', error))
     );
-   console.log(this.apiService);
+  
   }
-
+  getDataListres(): void {
+    this.apiService.get(this.idusuario)
+      .subscribe(
+        (response: any) => this.lists = response,
+        (error: string) => (console.log('Ups! we have an error: ', error))
+    );
+  
+  }
   getDataStored(): void {
     this.taskService.getBoardList$
       .subscribe(
