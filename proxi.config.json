@@ -1,0 +1,7 @@
+{
+    "/api/*":{
+    "target":"http://69.10.42.61/api-ibarti2/",
+    "secure":false,
+    "logLevel":"debug"
+    }
+}
